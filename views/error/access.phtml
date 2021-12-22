@@ -1,0 +1,11 @@
+<div id="separador"></div>
+<h2><?php if(isset($this->mensaje)) echo $this->mensaje;?></h2>
+
+<p>&nbsp;</p>
+
+<p><a href="<?php echo BASE_URL;?>">Ir al Inicio</a>
+
+<?php if(!Session::get('autenticado')):?>
+	| <a href="<?php echo BASE_URL . 'login';?>">Iniciar Sesion</a></p>
+<?php endif;?>
+<div id="separator"></div>
