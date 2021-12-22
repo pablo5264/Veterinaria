@@ -89,7 +89,7 @@ class TipoServiciosController extends Controller
         $this->_view->assign('enviar', CTRL);
 
         if ($this->getAlphaNum('enviar') == CTRL) {
-            $this->_view->assign('comuna', $_POST);
+            $this->_view->assign('tiposervicio', $_POST);
 
             if (!$this->getSql('nombre') || strlen($this->getSql('nombre')) < 4) {
                 $this->_view->assign('_error','El nombre debe tener al menos 4 caracteres');
