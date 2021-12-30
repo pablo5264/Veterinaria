@@ -11,6 +11,7 @@ class indexController extends Controller
 
 	public function index()
 	{
+		$this->verificarMensajes();
 
 		$this->_view->assign('titulo', 'Bienvenido a Veterinaria');
 		$this->_view->assign('title', 'Bienvenido a Veterinaria');

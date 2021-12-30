@@ -1,5 +1,5 @@
-function eliminar() {
-    let eliminar = confirm('¿Desea eliminar el rol?');
+function eliminar(modelo) {
+    let eliminar = confirm('¿Desea eliminar el '+modelo+'?');
     let form = document.form;
 
     if (eliminar) {

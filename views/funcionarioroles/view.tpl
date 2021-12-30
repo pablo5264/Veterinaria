@@ -33,7 +33,7 @@
                 </p>
                 <form name="form" action="{$_layoutParams.root}funcionarioroles/delete/{$funcionarioRol.id}" method="post">
                     <input type="hidden" name="enviar" value="{$enviar}">
-                    <button type="button" onclick="eliminar();" class="btn btn-outline-warning">Eliminar</button>
+                    <button type="button" onclick="eliminar('rol');" class="btn btn-outline-warning">Eliminar</button>
                 </form>
             </div>
         </div>

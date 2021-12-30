@@ -2,12 +2,15 @@
 use models\Funcionario;
 use models\Comuna;
 use models\FuncionarioRol;
+use models\Telefono;
 
 class funcionariosController extends Controller
 {
     public function __construct()
     {
         parent::__construct();
+        $this->verificarSession();
+        $this->verificarRolAdminSuper();
     }
 
     public function index()
@@ -29,6 +32,8 @@ class funcionariosController extends Controller
         $this->_view->assign('title','Funcionarios');
         $this->_view->assign('funcionario', Funcionario::with(['comuna','roles','usuario'])->find($this->filtrarInt($id)));
         $this->_view->assign('roles', FuncionarioRol::with('rol')->where('funcionario_id', $this->filtrarInt($id))->get());
+        $this->_view->assign('type', 'Funcionario');
+        $this->_view->assign('telefonos', Telefono::where('telefonoable_id',$this->filtrarInt($id))->where('telefonoable_type','Funcionario')->get());
         $this->_view->renderizar('view');
     }
 

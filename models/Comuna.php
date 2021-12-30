@@ -17,4 +17,8 @@ class Comuna extends Model
     {
         return $this->hasMany(Funcionario::class);
     }
+    public function clientes()
+    {
+        return $this->hasMany(Cliente::class);
+    }
 }

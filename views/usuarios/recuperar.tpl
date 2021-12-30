@@ -6,7 +6,7 @@
                     {$title}
                 </h3>
 
-                <h4 class="text-info">Inicie sesión para continuar</h4>
+                <h4 class="text-info">Envia tu email para recuperar password</h4>
 
                 {include file="../partials/_mensajes.tpl"}
 
@@ -14,18 +14,10 @@
 
                 <form action="" method="post">
                     <div class="mb-3">
-                        <label for="email" class="label text-success" style="font-weight: bold; font-size: 14px;">Email <span class="text-danger">*</span></label>
+                        <label for="email" class="label text-success" style="font-weight: bold; font-size: 14px;">Email
+                            <span class="text-danger">*</span></label>
                         <input type="email" name="email" class="form-control" id="" aria-describedby=""
                             placeholder="Ingrese su email" onpaste="return false">
-                    </div>
-                    <div class="mb-3">
-                        <label for="clave" class="label text-success" style="font-weight: bold; font-size: 14px;">Password <span
-                                class="text-danger">*</span></label>
-                        <input type="password" name="clave" class="form-control" id="" aria-describedby=""
-                            placeholder="Ingrese su password" onpaste="return false">
-                    </div>
-                    <div class="mb-3">
-                        <a href="{$_layoutParams.root}usuarios/recuperar">¿Olvidaste tu password?</a>
                     </div>
                     <input type="hidden" name="enviar" value="{$enviar}">
                     <button type="submit" class="btn btn-outline-success">Ingresar</button>

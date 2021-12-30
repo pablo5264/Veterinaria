@@ -27,4 +27,9 @@ class Funcionario extends Model
     {
         return $this->hasOne(Usuario::class);
     }
+
+    public function telefonos()
+    {
+        return $this->morphMany(Telefono::class, 'telefonoable');
+    }
 }

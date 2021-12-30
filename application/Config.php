@@ -1,6 +1,6 @@
 <?php
 
-define('BASE_URL', 'http://www.veteri.local/');
+define('BASE_URL', 'http://www.veterinaria.aiep/');
 define('DEFAULT_CONTROLLER', 'index');
 define('DEFAULT_LAYOUT', 'default');
 

@@ -94,6 +94,38 @@
                         <p class="text-info">No hay roles asociados</p>
                     {/if}
                 </div>
+                {* lista de telefonos *}
+                <div class="sidebar-box ftco-animate">
+                    <h3>Teléfonos</h3>
+                    <a href="{$_layoutParams.root}telefonos/add/{$funcionario.id}/{$type}"
+                        class="btn btn-outline-success btn-sm">Agregar Teléfono</a>
+
+                    {if isset($telefonos) && count($telefonos)}
+                        <table class="table table-hover table-responsive">
+                            <tr>
+                                <th>Número</th>
+                                <th>Móvil</th>
+                            </tr>
+                            {foreach from=$telefonos item=telefono}
+                                <tr>
+                                    <td>
+                                        <a href="{$_layoutParams.root}telefonos/view/{$telefono.id}">{$telefono.numero}</a>
+                                    </td>
+                                    <td>
+                                        {if $telefono.movil == 1}
+                                            Si
+                                        {else}
+                                            No
+                                        {/if}
+                                    </td>
+                                </tr>
+                            {/foreach}
+
+                        </table>
+                    {else}
+                        <p class="text-info">No hay teléfonos asociados</p>
+                    {/if}
+                </div>
             </div>
         </div>
     </div>
